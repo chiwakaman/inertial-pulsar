@@ -1,10 +1,13 @@
 function add(a, b) {
-    return a + b;
+      return Number(a) + Number(b);
 }
 
 function divide(a, b) {
-    return a / b;
+      if (b === 0) {
+              throw new Error("No se puede dividir por cero");
+      }
+      return a / b;
 }
 
-// Intentional type issue
+// Fixed type issue
 console.log(add(5, "10")); 
