@@ -1,0 +1,32 @@
+# CodeRabbit Configuration
+language: "es"
+
+reviews:
+  auto_review:
+    enabled: true
+    ignore_drafts: true
+  profile: "chill"
+  review_summary: true
+  sequence_diagrams: true
+
+instructions:
+  general: |
+    - Revisa el codigo buscando errores y bugs
+    - Sugiere mejoras de rendimiento
+    - Verifica buenas practicas
+
+path_instructions:
+  - path: "**/*.js"
+    instructions: "Verifica async/await y manejo de errores"
+  - path: "**/*.ts"
+    instructions: "Revisa tipos y evita any"
+
+chat:
+  enabled: true
+
+ignore:
+  paths:
+    - "node_modules/**"
+    - "dist/**"
+    - "build/**"
+
